@@ -1,9 +1,13 @@
 SELECT 
-	zip,
-	MAX(maxtemperaturef) as maxtemp
+	MAX(maxtemperaturef) as max_temp, 
+	zip, 
+	date
 FROM
 	weather
-GROUP by zip;
+GROUP BY 2,3
+ORDER BY 1 DESC
+LIMIT 3;
+
 
 
 --What was the hottest day in our data set? Where was that?
